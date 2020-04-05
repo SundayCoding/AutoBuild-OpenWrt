@@ -62,7 +62,7 @@ jobs:
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
     - name: 自定义主题
       run: |
-#       cd package
+        cd lede/package
         mkdir openwrt-packages
         cd openwrt-packages
         git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
