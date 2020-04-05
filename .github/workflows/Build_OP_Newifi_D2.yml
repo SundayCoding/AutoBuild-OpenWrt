@@ -68,7 +68,7 @@ jobs:
     - name: 自定义主题
       working-directory: ./openwrt
       run: |
-        cd lede/package
+        cd openwrt/package
         mkdir openwrt-packages
         cd openwrt-packages
         git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
