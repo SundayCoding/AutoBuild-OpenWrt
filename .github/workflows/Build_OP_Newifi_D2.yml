@@ -60,7 +60,7 @@ jobs:
         REPO_URL: https://github.com/coolsnowwolf/lede
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-    - name: 自定义插件主题和软件包
+    - name: test
       run: |
         cd package
         mkdir openwrt-packages
