@@ -61,12 +61,14 @@ jobs:
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
     - name: 合并Lienol软件表
+      working-directory: ./openwrt
       run: |
         cd lede
         echo 'src-git lienol https://github.com/Lienol/openwrt-package' >> feeds.conf.default
         cd ..
     - name: 自定义主题
       run: |
+        working-directory: ./openwrt
         cd lede/package
         mkdir openwrt-packages
         cd openwrt-packages
