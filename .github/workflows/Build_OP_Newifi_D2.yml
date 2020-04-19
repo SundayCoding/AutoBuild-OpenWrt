@@ -68,6 +68,7 @@ jobs:
     - name: 自定义主题
       working-directory: ./openwrt
       run: |
+        pwd
         sudo -E cd package
         sudo -E mkdir openwrt-packages
         sudo -E cd openwrt-packages
