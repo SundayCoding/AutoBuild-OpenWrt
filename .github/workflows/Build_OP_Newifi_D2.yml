@@ -68,9 +68,9 @@ jobs:
     - name: 自定义主题
       working-directory: ./openwrt
       run: |
-        sudo cd package
-        sudo mkdir openwrt-packages
-        sudo cd openwrt-packages
+        sudo -E cd package
+        sudo -E mkdir openwrt-packages
+        sudo -E cd openwrt-packages
         git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
         git clone https://github.com/Ameykyl/luci-app-koolproxyR
         git clone https://github.com/rosywrt/luci-theme-rosy
