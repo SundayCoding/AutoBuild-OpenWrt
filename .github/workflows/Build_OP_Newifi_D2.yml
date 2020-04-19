@@ -66,12 +66,11 @@ jobs:
         echo 'src-git lienol https://github.com/Lienol/openwrt-package' >> feeds.conf.default
         cd ..
     - name: 自定义主题
-      working-directory: ./openwrt
+      working-directory: ./openwrt/package
       run: |
         pwd
-        sudo -E cd package
-        sudo -E mkdir openwrt-packages
-        sudo -E cd openwrt-packages
+        mkdir openwrt-packages
+        cd openwrt-packages
         git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
         git clone https://github.com/Ameykyl/luci-app-koolproxyR
         git clone https://github.com/rosywrt/luci-theme-rosy
