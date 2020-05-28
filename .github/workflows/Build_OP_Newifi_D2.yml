@@ -65,7 +65,7 @@ jobs:
       run: |
         echo 'src-git lienol https://github.com/Lienol/openwrt-package' >> feeds.conf.default
         cd ..
-    - name: 自定义主题
+    - name: 自定义主题1
       working-directory: ./openwrt/package
       run: |
         pwd
