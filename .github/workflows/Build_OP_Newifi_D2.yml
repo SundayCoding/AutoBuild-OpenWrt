@@ -57,13 +57,13 @@ jobs:
         sudo -E apt-get clean
     - name: Clone source code
       env: 
-        REPO_URL: https://github.com/SundayCoding/lede
+        REPO_URL: https://github.com/coolsnowwolf/lede
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
     - name: 合并Lienol软件表
       working-directory: ./openwrt
       run: |
-        echo 'src-git lienol https://github.com/Lienol/openwrt-package' >> feeds.conf.default
+        echo 'src-git lienol https://github.com/xiaorouji/openwrt-package' >> feeds.conf.default
         cd ..
     - name: 自定义主题1
       working-directory: ./openwrt/package
